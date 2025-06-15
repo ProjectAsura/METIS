@@ -43,6 +43,9 @@
 #define REALTYPEWIDTH 64
 
 
+#if defined(_MSC_VER)
+#pragma warning(disable:4005)
+#endif
 
 /****************************************************************************
 * In principle, nothing needs to be changed beyond this point, unless the
@@ -79,6 +82,10 @@ typedef __int64 int64_t;
 #else
 #include <inttypes.h>
 #endif
+#endif
+
+#if defined(_MSC_VER)
+#pragma warning(default:4005)
 #endif
 
 
